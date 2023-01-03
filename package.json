@@ -105,7 +105,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:watch":"webpack --watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "axios",
+    "string",
+    "array",
+    "regExp",
+    "math",
+    "date",
+    "effect",
+    "log",
+    "execption",
+    "dom",
+    "event",
+    "json"
+  ],
+  "author": "☆往事随風☆-WK",
   "license": "ISC"
 }

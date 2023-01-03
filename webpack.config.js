@@ -11,6 +11,8 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),
 		// 打包文件
 		filename: 'Free.js',
+		// 对外暴露的对象名称
+		// library:'free',
 		//打包生成库可以通过esm/commonjs/reqirejs的语法引入
 		libraryTarget: 'umd',
 	}
