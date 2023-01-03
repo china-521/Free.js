@@ -96,5 +96,7 @@ export default {
 				}
 			}, 0);
 		}
-	}
+	},
+	Free,
+	$Free,
 }
