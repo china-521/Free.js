@@ -13,7 +13,7 @@ import {
 // 将 Free 的方法挂载到 Vue 身上
 export function installToVue(Vue) {
 	if (Vue) {
-		if (!checkObject(Vue, false) || !checkFun(Vue, false)) {
+		if (!checkObject(Vue, false) && !checkFun(Vue, false)) {
 			error('The input types do not match. Please enter an object or function type');
 		}
 		return $mounted(Vue);
