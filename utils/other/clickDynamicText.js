@@ -104,7 +104,7 @@ export function clickDynamicText({
 			clearInterval(timer1);
 			removeChild({
 				el: el,
-				el: tempSpan
+				selector: tempSpan
 			});
 			count++;
 			if (count >= 0) {
