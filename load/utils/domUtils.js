@@ -45,6 +45,9 @@ import {
 import {
 	removeChild
 } from "../../utils/dom/removeChild.js";
+import {
+	pageDown
+} from "../../utils/dom/pageDown.js";
 
 export default {
 	vm,
@@ -66,5 +69,5 @@ export default {
 	createElement,
 	removeChild,
 	nodeHandler,
-
+	pageDown
 }
