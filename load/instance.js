@@ -20,6 +20,7 @@ import exceptionUtils from './utils/exceptionUtils.js';
 import otherUtils from './utils/otherUtils.js';
 import mathUtils from './utils/mathUtils.js';
 import dateUtils from './utils/dateUtils.js';
+import classUtils from './utils/classUtils.js';
 
 
 // instance对象
@@ -41,7 +42,8 @@ extend(storageUtils, instance);
 extend(exceptionUtils, instance);
 extend(otherUtils, instance);
 extend(mathUtils, instance);
-extend(dateUtils,instance);
+extend(dateUtils, instance);
+extend(classUtils,instance);
 
 // 暴露 instance 对象
 export default instance;
