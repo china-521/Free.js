@@ -5,7 +5,6 @@
  * 参数说明：
  *      @param {String} el 时间展示容器
  *      @param {boolean} flag 返回时间的方式，如果为true，返回带有描述性文本格式的时间模板，如果为false，则返回时间数组，用户可操作返回的时间数组。
- *      @param {Array} $timeArray 临时保存更新后的时间
  */
 
 import {
