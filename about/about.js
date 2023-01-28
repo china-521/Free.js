@@ -1,5 +1,5 @@
 export default {
-	version: 'v2.0.2',
+	version: 'v2.1.2',
 	author: '☆往事随風☆',
 	blog: 'https://wk-blog.vip',
 	api: 'http://wk-china.gitee.io/free-document/#/',
