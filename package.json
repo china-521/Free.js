@@ -1,8 +1,8 @@
 {
   "name": "free-min",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "description": "Free.js是一款轻量级的js函数工具库",
-  "main": "index.js",
+  "main": "./dist/Free.js",
   "directories": {
     "test": "test"
   },
