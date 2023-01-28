@@ -31,6 +31,9 @@ import {
 	drag
 } from "../../utils/dom/drag.js";
 import {
+	dragPlus
+} from "../../utils/dom/drag.js";
+import {
 	divMove
 } from "../../utils/dom/divMove.js";
 import {
@@ -69,5 +72,6 @@ export default {
 	createElement,
 	removeChild,
 	nodeHandler,
-	pageDown
+	pageDown,
+	dragPlus
 }
