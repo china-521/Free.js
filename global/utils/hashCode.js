@@ -9,8 +9,8 @@ import {
  * @param {String} input 计算字符串的hashCode值 
  * @returns 
  */
-let hash = 0;
 export function hashCode(input) {
+	let hash = 0;
 	if (input) {
 		if (checkString(input, false)) {
 			let h = hash;
