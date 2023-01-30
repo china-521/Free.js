@@ -79,7 +79,9 @@ export function nodeHandler(node, {
 		addMoreClass(node, className);
 	}
 	if (id && checkString(id)) {
-		attributeUtils.set(node,{id:id});
+		attributeUtils.set(node, {
+			id: id
+		});
 	}
 	if (attribute && checkObject(attribute)) {
 		attributeUtils.set(node, attribute);
@@ -168,8 +170,6 @@ export function createElement({
 	}
 	// 设置模式
 	let mode = count > 1 ? 2 : 1;
-	// 设置 DOM 数组
-	let nodeList = [];
 	// 获取父元素
 	if (tagName) {
 		if (mode === 1) {
@@ -195,11 +195,10 @@ export function createElement({
 				id: id
 			}
 		} else {
+			const fragment = document.createDocumentFragment();
 			for (let i = 0; i < count; i++) {
-				nodeList.push(document.createElement(tagName));
-			}
-			nodeList.forEach(node => {
-				node = nodeHandler(node, {
+				let element = document.createElement(tagName);
+				element = nodeHandler(element, {
 					className: className,
 					id: id,
 					attribute: attribute,
@@ -208,16 +207,15 @@ export function createElement({
 					event: event,
 					callback: callback
 				});
-			});
+				fragment.appendChild(element);
+			}
 			if (append && el) {
 				let parentNode = getElement(el);
-				nodeList.forEach(node => {
-					parentNode.append(node);
-				});
+				parentNode.appendChild(fragment);
 			}
 			return {
-				count: nodeList.length,
-				targetNodeList: nodeList,
+				count,
+				fragment
 			};
 		}
 	}
