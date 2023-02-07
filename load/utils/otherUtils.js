@@ -40,6 +40,9 @@ import {
 import {
 	randomColor
 } from "../../utils/other/randomColor.js";
+import {
+	appendParams
+} from "../../utils/other/appendParams.js";
 export default {
 	openQQ,
 	getUrlParams,
@@ -54,5 +57,6 @@ export default {
 	mousePointer,
 	mosaic,
 	gray,
-	randomColor
+	randomColor,
+	appendParams
 }

@@ -44,6 +44,12 @@ import {
 import {
 	removeTag
 } from "../../utils/string/removeTag.js";
+import {
+	trim
+} from "../../utils/string/trim.js";
+import {
+	insertStr
+} from "../../utils/string/insertStr.js";
 export default {
 	stringUtils: {
 		toString,
@@ -60,6 +66,8 @@ export default {
 		contain,
 		startWith,
 		endWith,
-		removeTag
+		removeTag,
+		trim,
+		insertStr
 	}
 }

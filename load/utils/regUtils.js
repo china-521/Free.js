@@ -38,6 +38,9 @@ import {
 import {
 	wxReg
 } from '../../utils/reg/wxReg.js';
+import {
+	ipReg
+} from '../../utils/reg/ipReg.js';
 
 
 export default {
@@ -54,6 +57,7 @@ export default {
 		strongPassword2,
 		strongPassword3,
 		matchNullStr,
-		wxReg
+		wxReg,
+		ipReg
 	}
 }

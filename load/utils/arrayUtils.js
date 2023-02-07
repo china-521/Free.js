@@ -79,6 +79,12 @@ import {
 import {
 	swap
 } from "../../utils/array/swap.js";
+import {
+	sum
+} from "../../utils/array/sum.js";
+import {
+	average
+} from "../../utils/array/average.js";
 export default {
 	arrayUtils: {
 		remove,
@@ -107,6 +113,8 @@ export default {
 		search,
 		binarySearch,
 		toString,
-		swap
+		swap,
+		sum,
+		average
 	}
 }
