@@ -65,6 +65,15 @@ import {
 import {
 	addMethod
 } from './utils/addMethod.js';
+import {
+	ipToNumber
+} from './utils/ipToNumber.js';
+import {
+	checkPlatform
+} from './utils/checkPlatform.js';
+import {
+	importScript
+} from './utils/importScript.js';
 // 全局属性或方法
 export default {
 	$config: {
@@ -93,5 +102,8 @@ export default {
 	shallowCopy,
 	deepCopy,
 	proxy,
-	addMethod
+	addMethod,
+	ipToNumber,
+	checkPlatform,
+	importScript
 }
