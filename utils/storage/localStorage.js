@@ -16,6 +16,9 @@ import {
 import {
 	checkString
 } from '../type/checkString.js';
+import {
+	error
+} from '../exception/error.js';
 /**
  *  功能说明：
  *      - 将数据保存到本地浏览器或从本地浏览器读取数据
@@ -149,11 +152,24 @@ function hasKey(key) {
 	return false;
 }
 
+/**
+ *  获取本地存储的key集合
+ * @returns {Array}
+ */
+function keys() {
+	if (window.localStorage) {
+		return Object.keys(localStorage);
+	}
+	error('Sorry, your browser does not support localStorage');
+	return [];
+}
+
 export default {
 	set,
 	get,
 	clear,
 	remove,
 	size,
-	hasKey
+	hasKey,
+	keys
 }

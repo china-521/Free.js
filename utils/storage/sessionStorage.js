@@ -148,11 +148,24 @@ function hasKey(key) {
 	return false;
 }
 
+/**
+ *  获取本地存储的key集合
+ * @returns {Array}
+ */
+function keys(){
+	if(window.sessionStorage){
+		return Object.keys(sessionStorage);
+	}
+	'Sorry, your browser does not support sessionStorage'
+	return [];
+}
+
 export default {
 	set,
 	get,
 	clear,
 	remove,
 	hasKey,
-	size
+	size,
+	keys
 }
