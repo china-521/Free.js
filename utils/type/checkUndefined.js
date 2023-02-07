@@ -8,8 +8,8 @@
  */
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	error
 } from '../exception/error.js';
@@ -18,12 +18,12 @@ import {
 } from './toJson.js';
 
 export function checkUndefined(value, show = true, msg) {
-	let flag = checkType(value) === 'Undefined';
+	let flag = getType(value) === 'Undefined';
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an undefined' + '\n' + '[error type]:' + `${checkType(value)} ~ ${toJson(value)}`);
+		error('Input type mismatch,Please enter an undefined' + '\n' + '[error type]:' + `${getType(value)} ~ ${toJson(value)}`);
 	}
 	return flag;
 }

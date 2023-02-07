@@ -9,8 +9,8 @@
 
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	error
 } from '../exception/error.js';
@@ -20,12 +20,12 @@ import {
 
 
 export function checkObject(obj, show = true, msg) {
-	let flag = checkType(obj) === 'Object';
+	let flag = getType(obj) === 'Object';
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an object' + '\n' + '[error type]:' + `${checkType(obj)} ~ ${toJson(obj)}`);
+		error('Input type mismatch,Please enter an object' + '\n' + '[error type]:' + `${getType(obj)} ~ ${toJson(obj)}`);
 	}
 	return flag;
 }

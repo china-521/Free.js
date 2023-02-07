@@ -9,8 +9,8 @@
 
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	checkString
 } from './checkString.js';
@@ -30,7 +30,7 @@ export function checkSelector(selector, show = true, msg) {
 		if (msg) {
 			error(msg);
 		}
-		error('Selector input type mismatch,Please enter a non-null string or DOM object' + '\n' + '[error type]:' + `${checkType(selector)} ~ ${toJson(selector)}`);
+		error('Selector input type mismatch,Please enter a non-null string or DOM object' + '\n' + '[error type]:' + `${getType(selector)} ~ ${toJson(selector)}`);
 	}
 	return flag;
 }

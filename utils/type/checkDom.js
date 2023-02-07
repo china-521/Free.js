@@ -8,8 +8,8 @@
  */
 
 import {
-	checkType
-} from "./checkType.js";
+	getType
+} from "./getType.js";
 import {
 	error
 } from "../exception/error.js";
@@ -30,7 +30,7 @@ export function checkDom(data, show = true, msg) {
 			error(msg);
 		}
 		0
-		error('Input type mismatch,Please enter a dom object' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('Input type mismatch,Please enter a dom object' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return flag || false;
 }

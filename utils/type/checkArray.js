@@ -8,8 +8,8 @@
  */
 
 import {
-	checkType
-} from './checkType.js'
+	getType
+} from './getType.js'
 import {
 	error
 } from '../exception/error.js';
@@ -17,12 +17,12 @@ import {
 	toJson
 } from './toJson.js';
 export function checkArray(arr, show = true, msg) {
-	let flag = (Array.isArray(arr));
+	let flag = getType(arr) === 'Array';
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error("The input data types do not match. Please enter an Array\n" + '[error type]:' + `${checkType(arr)} ~ ${toJson(arr)}`);
+		error("The input data types do not match. Please enter an Array\n" + '[error type]:' + `${getType(arr)} ~ ${toJson(arr)}`);
 	}
 	return flag;
 }

@@ -7,24 +7,23 @@
  * @returns {Boolean}
  */
 
-
-import {
-	checkType
-} from "./checkType.js";
 import {
 	error
 } from "../exception/error.js";
 import {
 	toJson
 } from "./toJson.js";
+import {
+	getType
+} from "./getType.js";
 
 export function checkNumber(data, show = true, msg) {
-	let flag = (typeof data === 'number' && (data + '') !== "NaN");
+	let flag = (getType(data) === 'Number' && (data + '') !== "NaN");
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('The input data types do not match. Please enter an Number' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('The input data types do not match. Please enter an Number' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return flag;
 }

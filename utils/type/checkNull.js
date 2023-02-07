@@ -9,8 +9,8 @@
 
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	error
 } from '../exception/error.js';
@@ -19,12 +19,12 @@ import {
 } from './toJson.js';
 
 export function checkNull(value, show = true, msg) {
-	let flag = checkType(value) === 'Object-Null';
+	let flag = getType(value) === 'Null';
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an null' + '\n' + '[error type]:' + `${checkType(value)} ~ ${toJson(value)}`);
+		error('Input type mismatch,Please enter an null' + '\n' + '[error type]:' + `${getType(value)} ~ ${toJson(value)}`);
 	}
 	return flag;
 }

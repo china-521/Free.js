@@ -9,8 +9,8 @@
 
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	checkString
 } from './checkString.js';
@@ -34,7 +34,7 @@ export function checkJson(str, show = true, msg) {
 				if (msg) {
 					error(msg);
 				}
-				error(e + "\n" + '[error type]:' + `${checkType(str)} ~ ${str}`);
+				error(e + "\n" + '[error type]:' + `${getType(str)} ~ ${str}`);
 			}
 			return false;
 		}

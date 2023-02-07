@@ -8,25 +8,22 @@
  */
 
 import {
-	checkObject
-} from "./checkObject.js";
+	getType
+} from "./getType.js";
 import {
 	error
 } from "../exception/error.js";
-import {
-	checkType
-} from "./checkType.js";
 import {
 	toJson
 } from "./toJson.js";
 
 export function checkRegExp(data, show = true, msg) {
-	let flag = checkObject(data, false) ? /^\/.*?\/$/.test(data) : false;
+	let flag = getType(data) === 'RegExp';
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an RegExp object' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('Input type mismatch,Please enter an RegExp object' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return flag;
 }

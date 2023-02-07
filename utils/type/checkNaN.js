@@ -8,8 +8,8 @@
  */
 
 import {
-	checkType
-} from './checkType.js';
+	getType
+} from './getType.js';
 import {
 	error
 } from '../exception/error.js';
@@ -18,12 +18,12 @@ import {
 } from './toJson.js';
 
 export function checkNaN(data, show = true, msg) {
-	let flag = Number.isNaN(data);
+	let flag = (getType(data) === 'Number' && (data + "") === 'NaN');
 	if (!flag && show) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an NaN' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('Input type mismatch,Please enter an NaN' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return flag;
 }

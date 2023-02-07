@@ -20,8 +20,8 @@ import {
 	checkNumber
 } from "./checkNumber.js";
 import {
-	checkType
-} from "./checkType.js";
+	getType
+} from "./getType.js";
 import {
 	toJson
 } from "./toJson.js";
@@ -32,7 +32,7 @@ export function checkInteger(data, show = true, msg) {
 			if (msg) {
 				error(msg);
 			}
-			error('Input type mismatch,Please enter an Integer' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+			error('Input type mismatch,Please enter an Integer' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 		}
 		return false;
 	}
@@ -42,7 +42,7 @@ export function checkInteger(data, show = true, msg) {
 		if(msg){
 			error(msg);
 		}
-		error('Input type mismatch,Please enter an Integer' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('Input type mismatch,Please enter an Integer' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return !flag;
 }

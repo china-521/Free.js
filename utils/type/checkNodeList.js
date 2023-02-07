@@ -11,9 +11,6 @@ import {
 	getType
 } from "./getType.js";
 import {
-	checkType
-} from "./checkType.js";
-import {
 	error
 } from "../exception/error.js";
 import {
@@ -27,7 +24,7 @@ export function checkNodeList(data, show = true, msg) {
 		if (msg) {
 			error(msg);
 		}
-		error('Input type mismatch,Please enter a NodeList' + '\n' + '[error type]:' + `${checkType(data)} ~ ${toJson(data)}`);
+		error('Input type mismatch,Please enter a NodeList' + '\n' + '[error type]:' + `${getType(data)} ~ ${toJson(data)}`);
 	}
 	return flag;
 }
