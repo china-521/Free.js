@@ -99,6 +99,21 @@ function hasKey(el, key) {
 	return false;
 }
 
+function keys(el){
+	const keys = [];
+	if(el && checkSelector(el)){
+		const element = getElement(el);
+		const map = element.attributes;
+		const keyList = Object.keys(map);
+		if(keyList){
+			keyList.forEach(key => {
+				keys.push(map[key]);
+			});
+		}
+	}
+	return keys;
+}
+
 function size(el) {
 	if (el && checkSelector(el)) {
 		let node = getElement(el);
@@ -132,6 +147,7 @@ export default {
 	remove,
 	hasKey,
 	size,
-	clear
+	clear,
+	keys
 
 }
